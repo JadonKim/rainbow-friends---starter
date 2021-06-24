@@ -3,14 +3,14 @@ namespace SpriteKind {
 }
 
 scene.onHitWall(SpriteKind.Player, function (sprite, location) {
-    
+    checkWall(sprite, location)
 })
 
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     switchToAnotherPlayer()
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-
+    jump(currentPlayer)
 })
 
 scene.onOverlapTile(SpriteKind.Player, assets.tile`Blue door`, function (sprite, location) {
